@@ -6,9 +6,10 @@ jest.useFakeTimers();
 
 describe('timerGame', () => {
   beforeEach(() => {
+    throw Error("asplode");
     jest.spyOn(global, 'setTimeout');
   });
-  
+
   it('waits 1 second before ending the game', () => {
     const timerGame = require('../timerGame');
     timerGame();
